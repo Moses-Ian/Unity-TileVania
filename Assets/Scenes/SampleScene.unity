@@ -29003,22 +29003,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1760942904841823567, guid: c679488f4c28d8549ab044a3d30e865c, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: b6f5d68f4f81289488f7ef643df593c6, type: 2}
-    - target: {fileID: 6342708738669604072, guid: c679488f4c28d8549ab044a3d30e865c, type: 3}
-      propertyPath: jumpSpeed
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 7513493930300943367, guid: c679488f4c28d8549ab044a3d30e865c, type: 3}
-      propertyPath: m_GravityScale
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7513493930300943367, guid: c679488f4c28d8549ab044a3d30e865c, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8354001752413983855, guid: c679488f4c28d8549ab044a3d30e865c, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -29066,10 +29050,6 @@ PrefabInstance:
     - target: {fileID: 8354001752413983890, guid: c679488f4c28d8549ab044a3d30e865c, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8354001752413983890, guid: c679488f4c28d8549ab044a3d30e865c, type: 3}
-      propertyPath: m_Layer
-      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c679488f4c28d8549ab044a3d30e865c, type: 3}
