@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     CapsuleCollider2D myCapsuleCollider;
     float baseGravity;
 
+
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
