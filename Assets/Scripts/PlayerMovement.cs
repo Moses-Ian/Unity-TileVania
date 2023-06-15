@@ -8,6 +8,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float runSpeed = 10f;
     [SerializeField] float jumpSpeed = 10f;
     [SerializeField] float climbSpeed = 5f;
+    [SerializeField] float deathSpeedX = 1f;
+    [SerializeField] float deathSpeedY = 10f;
+    [SerializeField] float pauseTime = 1f;
 
     Vector2 moveInput;
     Rigidbody2D myRigidbody;
@@ -99,6 +102,17 @@ public class PlayerMovement : MonoBehaviour
         {
             isAlive = false;
             myAnimator.SetTrigger("Dying");
+            myRigidbody.velocity = new Vector2(deathSpeedX * -Mathf.Sign(myRigidbody.velocity.x), deathSpeedY);
+            StartCoroutine(DeathPause());
         }
+    }
+
+    IEnumerator DeathPause()
+    {
+        Time.timeScale = 0f;
+        float pauseEndTime = Time.realtimeSinceStartup + pauseTime;
+        while (Time.realtimeSinceStartup < pauseEndTime)
+            yield return 0;
+        Time.timeScale = 1f;
     }
 }

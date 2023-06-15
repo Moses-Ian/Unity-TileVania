@@ -336,7 +336,7 @@ GameObject:
   - component: {fileID: 427846526}
   - component: {fileID: 427846531}
   - component: {fileID: 427846532}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29211,6 +29211,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6342708738669604072, guid: c679488f4c28d8549ab044a3d30e865c, type: 3}
+      propertyPath: pauseTime
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8354001752413983855, guid: c679488f4c28d8549ab044a3d30e865c, type: 3}
       propertyPath: m_RootOrder
       value: 2
