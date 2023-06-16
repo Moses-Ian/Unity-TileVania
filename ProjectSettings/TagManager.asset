@@ -17,7 +17,7 @@ TagManager:
   - Background
   - Bouncing
   - Enemies
-  - 
+  - Hazards
   - 
   - 
   - 
@@ -55,6 +55,9 @@ TagManager:
     locked: 0
   - name: Enemy
     uniqueID: 2112035773
+    locked: 0
+  - name: Hazards
+    uniqueID: 1123261089
     locked: 0
   - name: Player
     uniqueID: 3892314721
