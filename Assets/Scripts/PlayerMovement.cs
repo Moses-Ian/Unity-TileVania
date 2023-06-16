@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float deathSpeedX = 1f;
     [SerializeField] float deathSpeedY = 10f;
     [SerializeField] float pauseTime = 1f;
+    [SerializeField] float deathSpeed = 1f;
 
     Vector2 moveInput;
     Rigidbody2D myRigidbody;
@@ -113,6 +114,6 @@ public class PlayerMovement : MonoBehaviour
         float pauseEndTime = Time.realtimeSinceStartup + pauseTime;
         while (Time.realtimeSinceStartup < pauseEndTime)
             yield return 0;
-        Time.timeScale = 1f;
+        Time.timeScale = deathSpeed;
     }
 }
