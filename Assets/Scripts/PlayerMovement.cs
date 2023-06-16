@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float deathSpeedY = 10f;
     [SerializeField] float pauseTime = 1f;
     [SerializeField] float deathSpeed = 1f;
+    [SerializeField] GameObject bullet;
+    [SerializeField] Transform gun;
 
     Vector2 moveInput;
     Rigidbody2D myRigidbody;
@@ -62,6 +64,14 @@ public class PlayerMovement : MonoBehaviour
             return;
         
         myRigidbody.velocity += new Vector2(0f, jumpSpeed);
+    }
+
+    void OnFire(InputValue value)
+    {
+        if (!isAlive)
+            return;
+
+        Instantiate(bullet, gun.position, transform.rotation);
     }
 
     void Run()
