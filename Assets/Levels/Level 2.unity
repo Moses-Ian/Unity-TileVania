@@ -184,6 +184,10 @@ PrefabInstance:
       propertyPath: m_ChildCameras.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6407967362747873776, guid: 09dec9def36c8654896e4d42682c438a, type: 3}
+      propertyPath: m_BoundingShape2D
+      value: 
+      objectReference: {fileID: 1879306033}
     - target: {fileID: 6407967362747873777, guid: 09dec9def36c8654896e4d42682c438a, type: 3}
       propertyPath: m_Follow
       value: 
@@ -204,6 +208,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -5.9243245
       objectReference: {fileID: 0}
+    - target: {fileID: 6407967362837616489, guid: 09dec9def36c8654896e4d42682c438a, type: 3}
+      propertyPath: m_BoundingShape2D
+      value: 
+      objectReference: {fileID: 1879306033}
     - target: {fileID: 6407967362837616490, guid: 09dec9def36c8654896e4d42682c438a, type: 3}
       propertyPath: m_Follow
       value: 
@@ -220,13 +228,17 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -5.9243245
       objectReference: {fileID: 0}
+    - target: {fileID: 6407967363341253882, guid: 09dec9def36c8654896e4d42682c438a, type: 3}
+      propertyPath: m_BoundingShape2D
+      value: 
+      objectReference: {fileID: 1879306033}
     - target: {fileID: 6407967364086367820, guid: 09dec9def36c8654896e4d42682c438a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.3339412
+      value: 1.8008325
       objectReference: {fileID: 0}
     - target: {fileID: 6407967364086367820, guid: 09dec9def36c8654896e4d42682c438a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.9243245
+      value: -2.8998623
       objectReference: {fileID: 0}
     - target: {fileID: 6407967364086367923, guid: 09dec9def36c8654896e4d42682c438a, type: 3}
       propertyPath: orthographic size
@@ -25495,11 +25507,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -17.970371, y: 20.793594}
-      - {x: -18.09412, y: -4.184737}
-      - {x: -1.0277119, y: -4.1256714}
-      - {x: 14.013206, y: -3.9313588}
-      - {x: 14.093485, y: 21.020613}
+    - - {x: -4.102209, y: 27.149837}
+      - {x: -4.081497, y: -1.3677702}
+      - {x: -0.08872163, y: -1.6698532}
+      - {x: 7.295813, y: -1.4755378}
+      - {x: 7.376093, y: 27.593542}
 --- !u!1001 &2001805569
 PrefabInstance:
   m_ObjectHideFlags: 0
