@@ -5,7 +5,9 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] float runSpeed = 10f;
+    [SerializeField] float accelSpeed = 2f;
+    [SerializeField] float runSpeed = 0f;
+    [SerializeField] float topRunSpeed = 10f;
     [SerializeField] float jumpSpeed = 10f;
     [SerializeField] float climbSpeed = 5f;
     [SerializeField] float deathSpeedX = 1f;
@@ -50,7 +52,6 @@ public class PlayerMovement : MonoBehaviour
             return;
 
         moveInput = value.Get<Vector2>();
-        Debug.Log(moveInput);
     }
 
     void OnJump(InputValue value)
@@ -76,7 +77,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Run()
     {
-        Vector2 playerVelocity = new Vector2(moveInput.x * runSpeed, myRigidbody.velocity.y);
+        runSpeed = moveInput.x == 0 ? 0 : runSpeed + accelSpeed * moveInput.x;
+        if (Mathf.Abs(runSpeed) > topRunSpeed)
+            runSpeed = Mathf.Sign(moveInput.x) * topRunSpeed;
+        Vector2 playerVelocity = new Vector2(runSpeed, myRigidbody.velocity.y);
         myRigidbody.velocity = playerVelocity;
 
     }

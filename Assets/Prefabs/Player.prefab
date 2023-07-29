@@ -222,15 +222,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 368af07a0adf3b94ab49a89890e6994d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 10
+  accelSpeed: 2
+  runSpeed: 0
+  topRunSpeed: 10
   jumpSpeed: 12
   climbSpeed: 5
   deathSpeedX: 1
   deathSpeedY: 10
   pauseTime: 0.5
   deathSpeed: 0.25
-  bullet: {fileID: 0}
-  gun: {fileID: 0}
+  bullet: {fileID: 8281750733985732388, guid: bb1f4b2599376a5468d0072a24eaed53, type: 3}
+  gun: {fileID: 8626625072876248868}
 --- !u!61 &5091229859039640869
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -241,7 +243,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: b6f5d68f4f81289488f7ef643df593c6, type: 2}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.06338602, y: -0.4437015}
