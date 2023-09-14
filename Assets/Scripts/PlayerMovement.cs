@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float deathSpeed = 1f;
     [SerializeField] GameObject bullet;
     [SerializeField] Transform gun;
+    [SerializeField] float levelLoadDelay = 1f;
 
     Vector2 moveInput;
     Rigidbody2D myRigidbody;
@@ -33,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
         myCapsuleCollider = GetComponent<CapsuleCollider2D>();
         myFeetCollider = GetComponent<BoxCollider2D>();
         baseGravity = myRigidbody.gravityScale;
+        isAlive = true;
     }
 
     void Update()
@@ -82,7 +84,6 @@ public class PlayerMovement : MonoBehaviour
             runSpeed = Mathf.Sign(moveInput.x) * topRunSpeed;
         Vector2 playerVelocity = new Vector2(runSpeed, myRigidbody.velocity.y);
         myRigidbody.velocity = playerVelocity;
-
     }
 
     void FlipSprite()
@@ -119,6 +120,7 @@ public class PlayerMovement : MonoBehaviour
             myAnimator.SetTrigger("Dying");
             myRigidbody.velocity = new Vector2(deathSpeedX * -Mathf.Sign(myRigidbody.velocity.x), deathSpeedY);
             StartCoroutine(DeathPause());
+            FindObjectOfType<GameSession>().ProcessPlayerDeath();
         }
     }
 
@@ -126,8 +128,12 @@ public class PlayerMovement : MonoBehaviour
     {
         Time.timeScale = 0f;
         float pauseEndTime = Time.realtimeSinceStartup + pauseTime;
+        float deathEndTime = Time.realtimeSinceStartup + levelLoadDelay;
         while (Time.realtimeSinceStartup < pauseEndTime)
             yield return 0;
         Time.timeScale = deathSpeed;
+        while (Time.realtimeSinceStartup < deathEndTime)
+            yield return 0;
+        Time.timeScale = 1f;
     }
 }
