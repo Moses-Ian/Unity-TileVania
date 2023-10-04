@@ -12,11 +12,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float climbSpeed = 5f;
     [SerializeField] float deathSpeedX = 1f;
     [SerializeField] float deathSpeedY = 10f;
-    [SerializeField] float pauseTime = 1f;
+    [SerializeField] float pauseTime = .5f;
     [SerializeField] float deathSpeed = 1f;
     [SerializeField] GameObject bullet;
     [SerializeField] Transform gun;
-    [SerializeField] float levelLoadDelay = 1f;
+    [SerializeField] float levelLoadDelay = 5f;
 
     Vector2 moveInput;
     Rigidbody2D myRigidbody;

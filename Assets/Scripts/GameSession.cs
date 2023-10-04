@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameSession : MonoBehaviour
 {
     [SerializeField] int playerLives = 3;
-    [SerializeField] float levelLoadDelay = 1f;
+    [SerializeField] float levelLoadDelay = 5f;
 
     void Awake()
     {
@@ -31,7 +31,7 @@ public class GameSession : MonoBehaviour
         }
         else
         {
-            ResetGameSession();
+            StartCoroutine(ResetGameSession());
         }
     }
 
@@ -48,8 +48,9 @@ public class GameSession : MonoBehaviour
         playerLives--;
     }
 
-    private void ResetGameSession()
+    private IEnumerator ResetGameSession()
     {
+        yield return new WaitForSecondsRealtime(levelLoadDelay);
         SceneManager.LoadScene(0);
         Destroy(gameObject);
     }
